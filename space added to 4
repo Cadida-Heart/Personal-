@@ -1,0 +1,34 @@
+{
+  "type": "basic",
+  "from": {
+    "key_code": "keypad_4"
+  },
+  "conditions": [
+    {
+      "type": "variable_if",
+      "name": "bear_macro_mode",
+      "value": 1
+    }
+  ],
+  "to": [
+    {
+      "set_variable": {
+        "name": "bear_shift",
+        "value": 1
+      }
+    }
+  ],
+  "to_if_alone": [
+    {
+      "key_code": "spacebar"
+    }
+  ],
+  "to_after_key_up": [
+    {
+      "set_variable": {
+        "name": "bear_shift",
+        "value": 0
+      }
+    }
+  ]
+}
