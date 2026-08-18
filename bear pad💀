@@ -83,8 +83,13 @@
           "value": 1
         }
       ],
-      "to": [{ "key_code": "left_arrow" }]
+      "to": [
+        {
+          "shell_command": "export LANG=en_US.UTF-8; old=\"$(pbpaste)\"; printf '←' | pbcopy; osascript -e 'tell application \"System Events\" to keystroke \"v\" using command down'; sleep 0.2; printf '%s' \"$old\" | pbcopy"
+        }
+      ]
     },
+
     {
       "type": "basic",
       "from": { "key_code": "keypad_3" },
@@ -100,7 +105,11 @@
           "value": 1
         }
       ],
-      "to": [{ "key_code": "right_arrow" }]
+      "to": [
+        {
+          "shell_command": "export LANG=en_US.UTF-8; old=\"$(pbpaste)\"; printf '→' | pbcopy; osascript -e 'tell application \"System Events\" to keystroke \"v\" using command down'; sleep 0.2; printf '%s' \"$old\" | pbcopy"
+        }
+      ]
     },
 
     {
@@ -143,7 +152,7 @@
       ],
       "to": [
         {
-          "shell_command": "old=\"$(pbpaste)\"; printf '💀' | pbcopy; osascript -e 'tell application \"System Events\" to keystroke \"v\" using command down'; sleep 0.2; printf '%s' \"$old\" | pbcopy"
+          "shell_command": "export LANG=en_US.UTF-8; old=\"$(pbpaste)\"; printf '💀' | pbcopy; osascript -e 'tell application \"System Events\" to keystroke \"v\" using command down'; sleep 0.2; printf '%s' \"$old\" | pbcopy"
         }
       ]
     },
@@ -163,8 +172,13 @@
           "value": 1
         }
       ],
-      "to": [{ "key_code": "up_arrow" }]
+      "to": [
+        {
+          "shell_command": "export LANG=en_US.UTF-8; old=\"$(pbpaste)\"; printf '↑' | pbcopy; osascript -e 'tell application \"System Events\" to keystroke \"v\" using command down'; sleep 0.2; printf '%s' \"$old\" | pbcopy"
+        }
+      ]
     },
+
     {
       "type": "basic",
       "from": { "key_code": "keypad_3" },
@@ -180,7 +194,11 @@
           "value": 1
         }
       ],
-      "to": [{ "key_code": "down_arrow" }]
+      "to": [
+        {
+          "shell_command": "export LANG=en_US.UTF-8; old=\"$(pbpaste)\"; printf '↓' | pbcopy; osascript -e 'tell application \"System Events\" to keystroke \"v\" using command down'; sleep 0.2; printf '%s' \"$old\" | pbcopy"
+        }
+      ]
     },
 
     {
@@ -239,8 +257,11 @@
           "value": 1
         }
       ],
-      "to": [{ "shell_command": "open -a 'Notes'" }]
+      "to": [
+        { "shell_command": "open -a 'Notes'" }
+      ]
     },
+
     {
       "type": "basic",
       "from": { "key_code": "keypad_hyphen" },
@@ -251,8 +272,11 @@
           "value": 1
         }
       ],
-      "to": [{ "shell_command": "open -a 'Discord'" }]
+      "to": [
+        { "shell_command": "open -a 'Discord'" }
+      ]
     },
+
     {
       "type": "basic",
       "from": { "key_code": "keypad_7" },
@@ -263,8 +287,11 @@
           "value": 1
         }
       ],
-      "to": [{ "shell_command": "open -a 'Visual Studio Code'" }]
+      "to": [
+        { "shell_command": "open -a 'Visual Studio Code'" }
+      ]
     },
+
     {
       "type": "basic",
       "from": { "key_code": "keypad_9" },
@@ -275,8 +302,11 @@
           "value": 1
         }
       ],
-      "to": [{ "shell_command": "open -a 'Freeform'" }]
+      "to": [
+        { "shell_command": "open -a 'Freeform'" }
+      ]
     },
+
     {
       "type": "basic",
       "from": { "key_code": "keypad_enter" },
@@ -287,7 +317,9 @@
           "value": 1
         }
       ],
-      "to": [{ "shell_command": "open -a 'Google Chrome'" }]
+      "to": [
+        { "shell_command": "open -a 'Google Chrome'" }
+      ]
     },
 
     {
@@ -325,6 +357,7 @@
         }
       ]
     },
+
     {
       "type": "basic",
       "from": { "key_code": "keypad_period" },
@@ -354,9 +387,7 @@
         }
       ],
       "to": [
-        {
-          "shell_command": "open -a 'Py Editor'"
-        }
+        { "shell_command": "open -a 'Py Editor'" }
       ]
     },
 
@@ -371,9 +402,7 @@
         }
       ],
       "to": [
-        {
-          "shell_command": "open -a 'Calendar'"
-        }
+        { "shell_command": "open -a 'Calendar'" }
       ]
     }
   ]
