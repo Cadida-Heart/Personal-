@@ -1,0 +1,202 @@
+{
+  "description": "Bear Pad Macro Mode",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_num_lock"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 0
+        }
+      ],
+      "to": [
+        {
+          "set_variable": {
+            "name": "bear_macro_mode",
+            "value": 1
+          }
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_num_lock"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 1
+        }
+      ],
+      "to": [
+        {
+          "set_variable": {
+            "name": "bear_macro_mode",
+            "value": 0
+          }
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_7"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 1
+        }
+      ],
+      "to": [
+        {
+          "shell_command": "open -a 'Visual Studio Code'"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_9"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 1
+        }
+      ],
+      "to": [
+        {
+          "shell_command": "open -a 'Freeform'"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_slash"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 1
+        }
+      ],
+      "to": [
+        {
+          "shell_command": "open -a 'Notes'"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_hyphen"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 1
+        }
+      ],
+      "to": [
+        {
+          "shell_command": "open -a 'Discord'"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_enter"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 1
+        }
+      ],
+      "to": [
+        {
+          "shell_command": "open -a 'Google Chrome'"
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_0"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 1
+        }
+      ],
+      "to": [
+        {
+          "key_code": "tab",
+          "modifiers": ["left_control", "left_shift"]
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_period"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 1
+        }
+      ],
+      "to": [
+        {
+          "key_code": "tab",
+          "modifiers": ["left_control"]
+        }
+      ]
+    },
+
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "keypad_5"
+      },
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "bear_macro_mode",
+          "value": 1
+        }
+      ],
+      "to": [
+        {
+          "key_code": "tab",
+          "modifiers": ["left_command"]
+        }
+      ]
+    }
+  ]
+}
